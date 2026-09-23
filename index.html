@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FundMatch helps people discover grants, scholarships, loans, and assistance matched to their goals." />
+  <title>FundMatch — Find funding that fits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="FundMatch home"><span class="brand-mark">✦</span><span>fund<span class="brand-accent">match</span></span></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#discover">Discover</a><a href="#how-it-works">How it works</a><a href="#saved">Saved <span class="saved-count">0</span></a>
+    </nav>
+    <button class="button button-outline" id="signInButton">Sign in</button>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Funding made personal</p>
+        <h1>Find funding for <em>what's next.</em></h1>
+        <p class="hero-lead">Grants, scholarships, loans, and assistance programs—matched to your life, your goals, and your future.</p>
+        <button class="button button-primary hero-cta" id="startButton">Find my matches <span>→</span></button>
+        <div class="trust-row"><span>✦</span> Personalized matches <span class="divider">·</span> Official sources <span class="divider">·</span> Always free to search</div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="shape shape-back"></div><div class="shape shape-front"></div><div class="floating-card card-one"><span class="mini-icon">✓</span><span><b>92% match</b><small>Rural Business Grant</small></span></div><div class="floating-card card-two"><span class="mini-icon gold">✦</span><span><b>New opportunity</b><small>Deadline in 12 days</small></span></div></div>
+    </section>
+
+    <section class="path-section section-shell" id="discover">
+      <div class="section-heading"><p class="eyebrow">Start where you are</p><h2>What are you funding?</h2><p>Choose a path and we'll ask only what matters for your search.</p></div>
+      <div class="path-grid">
+        <button class="path-card path-business" data-path="business"><span class="path-icon">▣</span><span class="path-title">My business</span><span class="path-description">Grants, loans & incentives for your business.</span><span class="path-arrow">→</span></button>
+        <button class="path-card path-school" data-path="school"><span class="path-icon">⌁</span><span class="path-title">My education</span><span class="path-description">Scholarships, grants & student aid.</span><span class="path-arrow">→</span></button>
+        <button class="path-card path-personal" data-path="personal"><span class="path-icon">♡</span><span class="path-title">My life</span><span class="path-description">Benefits and assistance for your goals.</span><span class="path-arrow">→</span></button>
+      </div>
+    </section>
+
+    <section class="how-section section-shell" id="how-it-works">
+      <div class="section-heading"><p class="eyebrow">A simpler way forward</p><h2>From searching to supported.</h2></div>
+      <div class="steps"><div class="step"><span class="step-number">01</span><h3>Tell us your story</h3><p>Answer a few thoughtful questions. No complicated forms or jargon.</p></div><div class="step"><span class="step-number">02</span><h3>See your best matches</h3><p>We sort through opportunities and show you why each one fits.</p></div><div class="step"><span class="step-number">03</span><h3>Make your next move</h3><p>Save deadlines, organize documents, and apply with confidence.</p></div></div>
+    </section>
+
+    <section class="preview-section section-shell" id="saved"><div class="preview-copy"><p class="eyebrow">Your funding dashboard</p><h2>Less searching.<br /><em>More possibility.</em></h2><p>Keep every opportunity, deadline, and next step in one calm, organized place.</p><button class="text-button" id="previewButton">Preview your dashboard <span>→</span></button></div><div class="dashboard-preview"><div class="dashboard-top"><span>My matches</span><span class="live-dot">● Live</span></div><div class="match-preview"><div class="match-icon green">✦</div><div><b>Small Business Growth Grant</b><small>Excellent match · $10,000–$50,000</small></div><span class="match-score">92%</span></div><div class="match-preview"><div class="match-icon purple">✧</div><div><b>Future Leaders Scholarship</b><small>Likely match · Deadline Oct 18</small></div><span class="match-score">86%</span></div><div class="dashboard-footer">+ 14 more opportunities match your profile</div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="brand"><span class="brand-mark">✦</span><span>fund<span class="brand-accent">match</span></span></div><p>Funding discovery for real life.</p><small>FundMatch does not guarantee eligibility or approval. Always confirm details with the official provider.</small></footer>
+
+  <div class="modal-backdrop" id="modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeModal" aria-label="Close">×</button><p class="eyebrow">Let's get started</p><h2 id="modalTitle">What are you funding?</h2><p id="modalDescription">Choose a path to see a personalized preview.</p><div class="modal-options"><button data-path="business">▣ <span>My business</span><b>→</b></button><button data-path="school">⌁ <span>My education</span><b>→</b></button><button data-path="personal">♡ <span>My life</span><b>→</b></button></div><div class="form-area" id="formArea"></div></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
